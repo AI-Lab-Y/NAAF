@@ -145,7 +145,7 @@ def make_train_data(n, nr, diff=(0x80, 0x0), version=128):
     elif version == 192:
         keys = np.frombuffer(urandom(24 * n), dtype=np.uint64).reshape(3, -1)
         ks = expand_key(keys, nr, version=version)
-    elif version == 256:
+    else:
         keys = np.frombuffer(urandom(32 * n), dtype=np.uint64).reshape(4, -1)
         ks = expand_key(keys, nr, version=version)
 
@@ -155,6 +155,6 @@ def make_train_data(n, nr, diff=(0x80, 0x0), version=128):
     return(X,Y)
 
 
-# check_testvector(version=128)
-# check_testvector(version=192)
-# check_testvector(version=256)
+check_testvector(version=128)
+check_testvector(version=192)
+check_testvector(version=256)
