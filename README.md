@@ -1,2 +1,2 @@
-# NAPA
-Neural Aided Practical Attack on Large-Size ciphers
+# NAAF
+A Deep Learning aided Key Recovery Framework for Large-State Block Ciphers
